@@ -22,11 +22,24 @@ setInterval(() => {
 }, 5000);
 
 // Open setting box
-let settingBox = document.querySelector(".settings-box");
-
 document.querySelector(".setting-icon").addEventListener("click", (e) => {
-    if (settingBox.classList.contains("open-settings-box"))
-        settingBox.classList.remove("open-settings-box");
-    else
-        settingBox.classList.add("open-settings-box");
+    document.querySelector(".settings-box").classList.toggle("open-settings-box");
 });
+
+
+// Toggle flip icon
+document.querySelector(".setting-icon").addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("fa-flip");
+});
+
+
+// Switch color
+const LiColor = document.querySelectorAll(".color-list li");
+
+LiColor.forEach((i) => {
+    i.classList.remove("active");
+    i.addEventListener("click", e => {
+        document.documentElement.style.setProperty("--primary-color", e.currentTarget.dataset.color);
+        e.currentTarget.classList.add("active");
+    })
+})
