@@ -6,7 +6,7 @@
     --secondary-bg-color: #F8F9FA;
     --primary-text-color: #1A1A1A;
     --secondary-text-color: #6B7280;
-    --bg-opacity: 0.7;
+    --bg-opacity: 0.8;
 
 }
 
@@ -88,10 +88,10 @@ body {
     background-color: #ff6347;
 }
 .setting-container .setting-option .color-list li:nth-child(3) {
-    background-color: #adff2f;
+    background-color: #0000ff;
 }
 .setting-container .setting-option .color-list .active {
-    opacity: 0.5;
+    opacity: .5;
 }
 /* END SETTING BOX */
 /* Start Landing Page */

@@ -1,3 +1,10 @@
+// Check value in localStorage
+let mainColor = localStorage.getItem("mainColor");
+
+if (mainColor) {
+    document.documentElement.style.setProperty("--primary-color", localStorage.getItem("mainColor"));
+}
+
 // Selecting landing page
 let landingPage = document.querySelector(".landing-page");
 
@@ -26,20 +33,24 @@ document.querySelector(".setting-icon").addEventListener("click", (e) => {
     document.querySelector(".settings-box").classList.toggle("open-settings-box");
 });
 
-
 // Toggle flip icon
 document.querySelector(".setting-icon").addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("fa-flip");
 });
 
-
 // Switch color
 const LiColor = document.querySelectorAll(".color-list li");
 
 LiColor.forEach((i) => {
-    i.classList.remove("active");
-    i.addEventListener("click", e => {
+    i.addEventListener("click", (e) => {
+        e.currentTarget.parentElement.querySelectorAll(".active").forEach((j) => {
+            j.classList.remove("active");
+        });
+
+        localStorage.setItem("mainColor", e.currentTarget.dataset.color);
+
         document.documentElement.style.setProperty("--primary-color", e.currentTarget.dataset.color);
+        
         e.currentTarget.classList.add("active");
-    })
-})
+    });
+});
