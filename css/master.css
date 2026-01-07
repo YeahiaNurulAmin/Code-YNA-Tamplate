@@ -1,18 +1,25 @@
 :root {
-    --primary-color:#0A2540;
-    --secondary-color: #00B4D8;
-    --accent-color: #6C5CE7;
-    --background-color: #FFFFFF;
-    --secondary-bg-color: #F8F9FA;
-    --primary-text-color: #1A1A1A;
-    --secondary-text-color: #6B7280;
+    --primary-color: #0a2540;
+    --secondary-color: #00b4d8;
+    --accent-color: #6c5ce7;
+    --background-color: #ffffff;
+    --secondary-bg-color: #f3f4f5;
+    --primary-text-color: #1a1a1a;
+    --secondary-text-color: #6b7280;
     --bg-opacity: 0.8;
-
+}
+* {
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     background-color: var(--background-color);
+}
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 80px 0 0px 0;
 }
 /* START SETTING BOX */
 .settings-box {
@@ -21,7 +28,6 @@ body {
     left: -200px;
     top: 25%;
     width: 200px;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,11 +51,11 @@ body {
     z-index: 999;
     border-radius: 0 10px 10px 0;
     color: var(--primary-color);
-    width: 20px;
+    width: 40px;
     transition: 0.3s;
 }
 .settings-box .setting-icon:hover {
-    cursor: pointer; 
+    cursor: pointer;
     color: var(--secondary-color);
 }
 .open-settings-box {
@@ -58,14 +64,16 @@ body {
 .settings-box > .setting-container {
     position: relative;
     /* top: 50px; */
-
 }
 .settings-box > .setting-container h4 {
     font-weight: bold;
     color: var(--primary-text-color);
 }
-.setting-container .setting-option {
-
+.setting-container .setting-option .color-options {
+    box-sizing: content-box;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 .setting-container .setting-option .color-list {
     list-style: none;
@@ -82,7 +90,7 @@ body {
     cursor: pointer;
 }
 .setting-container .setting-option .color-list li:first-child {
-    background-color: #0A2540;
+    background-color: #0a2540;
 }
 .setting-container .setting-option .color-list li:nth-child(2) {
     background-color: #ff6347;
@@ -90,14 +98,53 @@ body {
 .setting-container .setting-option .color-list li:nth-child(3) {
     background-color: #0000ff;
 }
-.setting-container .setting-option .color-list .active {
-    opacity: .5;
+.active {
+    border: 2px solid white;
+    outline: 3px var(--secondary-color) solid;
+}
+/* Random backgrounds */
+.settings-box .random-bg-option {
+    margin-bottom: 60px;
+}
+.settings-box .random-bg-option .yes {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px;
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: small;
+}
+.settings-box .random-bg-option .yes:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.settings-box .random-bg-option .no {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px;
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: small;
+}
+.settings-box .random-bg-option .no:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
 }
 /* END SETTING BOX */
 /* Start Landing Page */
 .landing-page {
     min-height: 100vh;
-    background-image: url(../images/03.jpg);
+    /* background-image: url(../images/03.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,12 +170,11 @@ header {
     border-radius: 0 0 12px 12px;
 }
 header .logo {
-    
     padding: 10px 0 0 10px;
 }
 header nav {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     width: fit-content;
     padding: 10px 10px 0 0;
     font-weight: 600;
@@ -137,12 +183,11 @@ header nav {
 }
 header nav ul {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     list-style: none;
-    
 }
 header nav ul li {
-    padding-right: 25px ;
+    padding-right: 25px;
 }
 header nav ul li a {
     text-decoration: none;
@@ -184,9 +229,108 @@ header nav ul li a:hover {
 .introduction-text h1 span {
     color: var(--primary-color);
     transition: 0.1s;
-    
 }
 .introduction-text h1 span:hover {
     cursor: pointer;
 }
 /* End Landing Page */
+
+/* START ABOUT US */
+.about-us {
+    text-align: center;
+}
+.about-us h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 80px;
+}
+.about-us .box {
+    display: flex;
+    /* height: 200px; */
+}
+
+.about-us .info-box {
+    display: flex;
+    flex: 1;
+}
+.about-us .info-box p {
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    font-size: x-large;
+}
+.about-us .image-box {
+    flex: 0.6;
+}
+.about-us .image-box img {
+}
+/* END ABOUT US */
+
+/* START OUR SKILLS */
+.our-skills {
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+    padding-bottom: 50px;
+}
+.our-skills h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 80px;
+}
+.our-skills .box {
+    display: flex;
+    
+}
+.our-skills .box .image-box {
+    flex: 0.6;
+}
+.our-skills .box .info-box {
+    flex: 1;
+}
+.our-skills .box .info-box p {
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    font-size: x-large;
+}
+.our-skills .skills-progress-box {
+
+}
+.our-skills .skills-progress-box .progress-div {
+    display: flex;
+    height: 80px;
+    margin: 50px;
+    align-self: center;
+    
+}
+.our-skills .skills-progress-box .progress-div .skill-logo {
+    /* width: 80px; */
+}
+.our-skills .skills-progress-box .progress-container {
+    background-color: #dbdbdb;
+    height: 40%;
+    width: 100%;
+    margin-left: 10px;
+    align-self: center;
+    border-radius: 0 20px 20px 0;
+    align-content: center;
+    text-align: start;
+}
+.our-skills .skills-progress-box .progress-container span {
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+    background-color: var(--primary-color);
+    border-radius: 0 20px 20px 0;
+}
+.our-skills .skills-progress-box .progress-container .html-progress {
+    background-color: #f16529;
+    width: 90%;
+}
+.our-skills .skills-progress-box .progress-container .css-progress {
+    background-color: #2965f1;
+    width: 80%;
+}
+.our-skills .skills-progress-box .progress-container .js-progress {
+    background-color: #f5de19;
+    width: 50%;
+}
+/* END OUR SKILLS */
