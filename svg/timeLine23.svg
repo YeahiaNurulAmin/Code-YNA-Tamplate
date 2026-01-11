@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="200" cy="80" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="150" cy="120" r="1" fill="#ffffff" opacity="0.7"/>
+  <circle cx="650" cy="60" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="700" cy="100" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="580" cy="90" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="250" cy="40" r="1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="500" cy="70" r="1.5" fill="#ffffff" opacity="0.7"/>
+  
+  <!-- Rocket body -->
+  <g transform="translate(400, 200)">
+    <!-- Rocket glow -->
+    <ellipse cx="0" cy="0" rx="80" ry="120" fill="url(#glowGradient)" opacity="0.3"/>
+    
+    <!-- Main rocket body -->
+    <rect x="-25" y="-60" width="50" height="100" fill="#3b82f6" rx="3"/>
+    
+    <!-- Rocket nose cone -->
+    <path d="M -25,-60 L 0,-100 L 25,-60 Z" fill="#2563eb"/>
+    
+    <!-- Window -->
+    <circle cx="0" cy="-30" r="12" fill="#1e40af"/>
+    <circle cx="0" cy="-30" r="8" fill="#60a5fa" opacity="0.5"/>
+    
+    <!-- Rocket details -->
+    <rect x="-20" y="-10" width="40" height="3" fill="#1e40af"/>
+    <rect x="-20" y="5" width="40" height="3" fill="#1e40af"/>
+    
+    <!-- Fins -->
+    <path d="M -25,20 L -50,50 L -25,40 Z" fill="#2563eb"/>
+    <path d="M 25,20 L 50,50 L 25,40 Z" fill="#2563eb"/>
+    
+    <!-- Rocket fire/exhaust -->
+    <path d="M -20,40 L -15,70 L -10,55 L 0,80 L 10,55 L 15,70 L 20,40 Z" fill="#fbbf24">
+      <animate attributeName="d" 
+        values="M -20,40 L -15,70 L -10,55 L 0,80 L 10,55 L 15,70 L 20,40 Z;
+                M -20,40 L -15,75 L -10,60 L 0,90 L 10,60 L 15,75 L 20,40 Z;
+                M -20,40 L -15,70 L -10,55 L 0,80 L 10,55 L 15,70 L 20,40 Z"
+        dur="0.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M -15,40 L -10,60 L -5,50 L 0,70 L 5,50 L 10,60 L 15,40 Z" fill="#f59e0b" opacity="0.8">
+      <animate attributeName="d" 
+        values="M -15,40 L -10,60 L -5,50 L 0,70 L 5,50 L 10,60 L 15,40 Z;
+                M -15,40 L -10,65 L -5,55 L 0,80 L 5,55 L 10,65 L 15,40 Z;
+                M -15,40 L -10,60 L -5,50 L 0,70 L 5,50 L 10,60 L 15,40 Z"
+        dur="0.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Smoke clouds -->
+  <ellipse cx="350" cy="320" rx="40" ry="20" fill="#64748b" opacity="0.3">
+    <animate attributeName="rx" values="40;50;40" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="330" rx="35" ry="18" fill="#64748b" opacity="0.3">
+    <animate attributeName="rx" values="35;45;35" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Platform V2.0 Launch
+  </text>
+</svg>

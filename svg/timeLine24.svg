@@ -1,0 +1,101 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient2024" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="celebrationGlow">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient2024)"/>
+  
+  <!-- Celebration glow -->
+  <circle cx="400" cy="200" r="200" fill="url(#celebrationGlow)"/>
+  
+  <!-- Trophy base -->
+  <rect x="360" y="280" width="80" height="15" fill="#854d0e" rx="2"/>
+  <rect x="370" y="295" width="60" height="8" fill="#78350f" rx="2"/>
+  
+  <!-- Trophy cup -->
+  <path d="M 340,180 L 340,240 Q 340,260 360,270 L 440,270 Q 460,260 460,240 L 460,180 Z" 
+        fill="#fbbf24" stroke="#f59e0b" stroke-width="3"/>
+  
+  <!-- Trophy handles -->
+  <path d="M 340,200 Q 320,200 320,220 Q 320,235 340,235" 
+        fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 460,200 Q 480,200 480,220 Q 480,235 460,235" 
+        fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Trophy shine -->
+  <ellipse cx="380" cy="210" rx="15" ry="25" fill="#fef3c7" opacity="0.6"/>
+  
+  <!-- Trophy top rim -->
+  <ellipse cx="400" cy="180" rx="60" ry="12" fill="#f59e0b"/>
+  <ellipse cx="400" cy="180" rx="60" ry="10" fill="#fbbf24"/>
+  
+  <!-- Stars around trophy -->
+  <g opacity="0.8">
+    <path d="M 280,150 L 285,165 L 300,167 L 290,177 L 293,192 L 280,184 L 267,192 L 270,177 L 260,167 L 275,165 Z" 
+          fill="#fef3c7">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 520,150 L 525,165 L 540,167 L 530,177 L 533,192 L 520,184 L 507,192 L 510,177 L 500,167 L 515,165 Z" 
+          fill="#fef3c7">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 320,100 L 323,110 L 333,111 L 326,118 L 328,128 L 320,123 L 312,128 L 314,118 L 307,111 L 317,110 Z" 
+          fill="#fef3c7">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 480,100 L 483,110 L 493,111 L 486,118 L 488,128 L 480,123 L 472,128 L 474,118 L 467,111 L 477,110 Z" 
+          fill="#fef3c7">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Confetti -->
+  <g>
+    <rect x="200" y="80" width="8" height="12" fill="#ef4444" transform="rotate(20 204 86)">
+      <animate attributeName="y" values="80;350" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="300" y="60" width="8" height="12" fill="#3b82f6" transform="rotate(-15 304 66)">
+      <animate attributeName="y" values="60;350" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="500" y="70" width="8" height="12" fill="#a855f7" transform="rotate(25 504 76)">
+      <animate attributeName="y" values="70;350" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="600" y="90" width="8" height="12" fill="#ec4899" transform="rotate(-20 604 96)">
+      <animate attributeName="y" values="90;350" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="250" cy="100" r="4" fill="#fbbf24">
+      <animate attributeName="cy" values="100;350" dur="3.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="85" r="4" fill="#10b981">
+      <animate attributeName="cy" values="85;350" dur="2.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Milestone text on trophy -->
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#78350f" text-anchor="middle">
+    1M
+  </text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#78350f" text-anchor="middle">
+    USERS
+  </text>
+  
+  <!-- Bottom text -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Reached 1 Million Users
+  </text>
+</svg>
