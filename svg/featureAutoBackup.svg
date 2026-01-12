@@ -1,0 +1,34 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backupGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f0f9ff"/>
+  
+  <!-- Database cylinder -->
+  <ellipse cx="100" cy="90" rx="40" ry="12" fill="url(#backupGrad)"/>
+  <rect x="60" y="90" width="80" height="45" fill="url(#backupGrad)"/>
+  <ellipse cx="100" cy="135" rx="40" ry="12" fill="#0369a1"/>
+  
+  <!-- Database lines -->
+  <ellipse cx="100" cy="105" rx="40" ry="12" fill="none" stroke="#0369a1" stroke-width="2"/>
+  <ellipse cx="100" cy="120" rx="40" ry="12" fill="none" stroke="#0369a1" stroke-width="2"/>
+  
+  <!-- Circular arrow around database -->
+  <path d="M 145,100 A 50,50 0 1,1 145,110" 
+        stroke="#7dd3fc" stroke-width="5" fill="none" stroke-linecap="round">
+    <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;0,300" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Arrow head -->
+  <path d="M 145,108 L 150,103 L 143,100" 
+        fill="#7dd3fc"/>
+  
+  <!-- Checkmark on database -->
+  <path d="M 90,115 L 97,122 L 110,105" 
+        stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

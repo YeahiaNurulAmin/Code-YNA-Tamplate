@@ -152,7 +152,7 @@ function fillingImageInGallery(totalImage) {
     let galleryImageBox = document.querySelector(".gallery .image-box");
 
     arrGalleryImages.forEach((imagePath, index) => {
-        galleryImageBox.innerHTML += `<img src="${imagePath}" alt="Image ${index + 1}">`;
+        galleryImageBox.innerHTML += `<img loading="lazy" src="${imagePath}" alt="Image ${index + 1}">`;
     });
 }
 

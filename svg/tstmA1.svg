@@ -1,0 +1,31 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bg1)"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="85" r="35" fill="#fef3c7"/>
+  
+  <!-- Hair -->
+  <path d="M 65,75 Q 65,45 100,45 Q 135,45 135,75 Q 135,65 130,60 Q 125,55 120,60 Q 115,50 110,55 Q 105,48 100,55 Q 95,48 90,55 Q 85,50 80,55 Q 75,50 70,60 Q 65,65 65,75 Z" 
+        fill="#1e293b"/>
+  
+  <!-- Eyes -->
+  <circle cx="88" cy="82" r="3" fill="#1e293b"/>
+  <circle cx="112" cy="82" r="3" fill="#1e293b"/>
+  
+  <!-- Smile -->
+  <path d="M 85,95 Q 100,103 115,95" stroke="#1e293b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Body/Shoulders -->
+  <ellipse cx="100" cy="165" rx="60" ry="45" fill="#2563eb"/>
+  
+  <!-- Collar -->
+  <path d="M 85,135 L 80,150 L 100,155 L 120,150 L 115,135" fill="#1e40af"/>
+</svg>

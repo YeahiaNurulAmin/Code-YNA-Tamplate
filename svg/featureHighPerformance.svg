@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="perfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#fef2f2"/>
+  
+  <!-- Speedometer arc -->
+  <path d="M 50,130 A 60,60 0 0,1 150,130" 
+        stroke="#e5e7eb" stroke-width="15" fill="none" stroke-linecap="round"/>
+  
+  <!-- Active speedometer arc (partial) -->
+  <path d="M 50,130 A 60,60 0 0,1 130,65" 
+        stroke="url(#perfGrad)" stroke-width="15" fill="none" stroke-linecap="round"/>
+  
+  <!-- Center circle -->
+  <circle cx="100" cy="130" r="12" fill="url(#perfGrad)"/>
+  
+  <!-- Needle -->
+  <line x1="100" y1="130" x2="130" y2="75" 
+        stroke="#991b1b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="100" cy="130" r="6" fill="#991b1b"/>
+  
+  <!-- Speed marks -->
+  <line x1="48" y1="125" x2="53" y2="120" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="45" y1="110" x2="52" y2="107" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="47" y1="95" x2="55" y2="95" stroke="#9ca3af" stroke-width="2"/>
+  
+  <line x1="152" y1="125" x2="147" y2="120" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="155" y1="110" x2="148" y2="107" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="153" y1="95" x2="145" y2="95" stroke="#9ca3af" stroke-width="2"/>
+  
+  <line x1="95" y1="73" x2="95" y2="80" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="105" y1="73" x2="105" y2="80" stroke="#9ca3af" stroke-width="2"/>
+  
+  <!-- Lightning bolt for speed -->
+  <path d="M 105,40 L 95,55 L 102,55 L 98,70 L 108,52 L 101,52 Z" 
+        fill="#fbbf24">
+    <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </path>
+</svg>
