@@ -11,16 +11,49 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Open Sans", sans-serif;
     background-color: var(--background-color);
-    /* position: relative; */
 }
+/* REPEATED CLASSES */
+.container-header {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 80px;
+}
+.setting-btn {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px;
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: small;
+}
+.setting-btn:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.secondary-bgc-section {
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+    padding: 20px 0 50px 0;
+}
+/* ^^^ REPEATED CLASSES ^^^ */
+
 .container {
     width: 90%;
     margin: auto;
     padding: 80px 0 0px 0;
+    text-align: center;
 }
 /* START SETTING BOX */
 .settings-box {
@@ -64,7 +97,13 @@ body {
 }
 .settings-box > .setting-container {
     position: relative;
-    /* top: 50px; */
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+.settings-box > .setting-container h3 {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
 }
 .settings-box > .setting-container h4 {
     font-weight: bold;
@@ -107,41 +146,68 @@ body {
 .settings-box .random-bg-option {
     margin-bottom: 60px;
 }
-.settings-box .random-bg-option .yes {
-    text-align: center;
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 6px;
-    width: 40%;
-    margin-left: 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    font-size: small;
+
+/* Reset button */
+.reset-option {
+    margin: 80px 0 0px 0;
 }
-.settings-box .random-bg-option .yes:hover {
-    cursor: pointer;
-    color: var(--secondary-color);
-}
-.settings-box .random-bg-option .no {
-    text-align: center;
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 6px;
-    width: 40%;
-    margin-left: 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    font-size: small;
-}
-.settings-box .random-bg-option .no:hover {
-    cursor: pointer;
-    color: var(--secondary-color);
+.reset-option .reset-btn:hover {
+    color: rgb(255, 36, 36) !important;
 }
 /* END SETTING BOX */
+
+/* START NAV BULLETS */
+.nav-bullets {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+}
+.nav-bullets div {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    margin: 10px 10px 10px auto;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    transition: 0.3s;
+    align-self: self-end;
+    position: relative;
+    /* z-index: 999; */
+}
+.nav-bullet-active {
+    background-color: var(--primary-color) !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+.nav-bullets div:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+}
+.nav-bullets div span {
+    display: none;
+    position: absolute;
+    right: 50%;
+    top: -2px;
+    width: auto;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px 0 8px 8px;
+    z-index: -1;
+    transition: 0.3s;
+    font-size: small;
+    font-style: italic;
+    text-wrap: unset;
+}
+.nav-bullets div:hover span {
+    display: block;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+/* END NAV BULLETS */
+
 /* Start Landing Page */
 .landing-page {
     min-height: 100vh;
@@ -158,7 +224,7 @@ body {
     height: 100%;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: -1;
 }
 header {
     position: relative;
@@ -262,16 +328,9 @@ header nav ul li a:hover {
 .about-us .image-box {
     flex: 0.6;
 }
-.about-us .image-box img {
-}
 /* END ABOUT US */
 
 /* START OUR SKILLS */
-.our-skills {
-    background-color: var(--secondary-bg-color);
-    text-align: center;
-    padding-bottom: 50px;
-}
 .our-skills h2 {
     font-size: 40px;
     color: var(--primary-color);
@@ -422,9 +481,6 @@ header nav ul li a:hover {
 /* END POPUP  */
 
 /* START TIMELINE */
-.timeline {
-    background-color: var(--secondary-bg-color);
-}
 .timeline .container {
     display: flex;
     flex-direction: column;
@@ -571,3 +627,109 @@ header nav ul li a:hover {
     line-height: 1.5;
 }
 /* END OUR FEATURES */
+
+/* START testimonials */
+.testimonials .container {
+    display: flex;
+    margin-bottom: 150px;
+}
+.testimonials .testimoni-box2 {
+    margin-top: 150px;
+}
+.testimonials .comment {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 20px;
+    margin: 50px;
+    background-color: var(--background-color);
+    color: var(--secondary-text-color);
+    border-radius: 12px;
+}
+.testimonials .comment img {
+    grid-column: 1;
+}
+.testimonials .comment h4 {
+    grid-column: 2;
+    text-align: start;
+    color: var(--primary-color);
+}
+.testimonials .comment p {
+    grid-column: 1 / -1;
+}
+/* END testimonials */
+
+/* START CONTACT */
+.contact {
+    text-align: center;
+    /* margin-top: 80px; */
+    background-image: url("../images/contect-bg-image.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 50px;
+}
+.contact .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    
+}
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+.contact h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 2;
+}
+.contact .container form {
+    display: flex;
+    justify-content: space-around;
+}
+.contact .container form .left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contact .container form .right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contact .container input, textarea {
+    background-color: var(--background-color);
+    opacity: var(--bg-opacity);
+    padding: 8px;
+    width: 80%;
+    align-self: center;
+    margin: 12px;
+    border-radius: 10px;
+
+    border: none;
+    outline-color: var(--primary-color);
+    height: 40px;
+    color: var(--primary-text-color);
+}
+.contact .container input:focus:not([type="submit"]), textarea:focus {
+    outline: 5px solid var(--primary-color);
+    color: var(--primary-text-color);
+}
+.contact .container textarea {
+    height: calc(120px + 24px + 24px);
+}
+input[type="submit"]:hover {
+    color: var(--secondary-color);
+    outline: 5px solid var(--primary-color);
+    cursor: pointer;
+}
+
+
+
+/* END CONTACT */

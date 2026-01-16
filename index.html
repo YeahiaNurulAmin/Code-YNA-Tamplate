@@ -34,156 +34,184 @@
 
                     <div class="random-bg-option">
                         <h4>Random Backgrounds</h4>
-                        <span class="yes">YES</span>
-                        <span class="no">NO</span>
+                        <span class="yes setting-btn">YES</span>
+                        <span class="no setting-btn">NO</span>
+                    </div>
+
+                    <div class="nav-bullets-option">
+                        <h4>Navigation Bullets</h4>
+                        <div class="nav-btn">
+                            <span class="show setting-btn active">SHOW</span>
+                            <span class="hide setting-btn">HIDE</span>
+                        </div>
+                    </div>
+
+                    <div class="reset-option">
+                        <div class="reset-btn setting-btn">RESET</div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End Settings Box -->
 
-        <!-- Start Landing Page -->
-        <div class="landing-page">
-            <div class="overlay"></div>
-            <header>
-                <div class="logo">
-                    <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0" y="0" width="40" height="40" rx="8" fill="#0A2540" />
-                        <text x="12" y="26" font-size="18" fill="#00B4D8" font-family="Arial">{ }</text>
-                        <text x="50" y="26" font-size="18" fill="#0A2540" font-family="Arial" font-weight="bold">
-                            Code YNA
-                        </text>
-                    </svg>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#our-skills">Our Skills</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#timeline">Timeline</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="introduction-text">
-                <h1>We Are <span id="headerSpan">Creative</span> Agency</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vitae vel magni quia dolorem
-                    minus!
-                </p>
-            </div>
+        <!-- START NAV BULLETS -->
+        <div class="nav-bullets">
+            <div data-nav-section="home"><span>Home</span></div>
+            <div data-nav-section="about-us"><span>About Us</span></div>
+            <div data-nav-section="our-skills"><span>Our Skills</span></div>
+            <div data-nav-section="gallery"><span>Gallery</span></div>
+            <div data-nav-section="timeline"><span>Timeline</span></div>
+            <div data-nav-section="feature"><span>Our Features</span></div>
+            <div data-nav-section="testimonials"><span>Testimonials</span></div>
+            <div data-nav-section="contact"><span>Contact</span></div>
         </div>
+        <!-- END NAV BULLETS -->
+
+        <!-- Start Landing Page -->
+        <section id="home">
+            <div class="landing-page">
+                <div class="overlay"></div>
+                <header>
+                    <div class="logo">
+                        <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="40" height="40" rx="8" fill="#0A2540" />
+                            <text x="12" y="26" font-size="18" fill="#00B4D8" font-family="Arial">{ }</text>
+                            <text x="50" y="26" font-size="18" fill="#0A2540" font-family="Arial" font-weight="bold">
+                                Code YNA
+                            </text>
+                        </svg>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about-us">About Us</a></li>
+                            <li><a href="#our-skills">Our Skills</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#timeline">Timeline</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="introduction-text">
+                    <h1>We Are <span id="headerSpan">Creative</span> Agency</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vitae vel magni quia dolorem
+                        minus!
+                    </p>
+                </div>
+            </div>
+        </section>
         <!-- End Landing Page -->
 
         <!-- START ABOUT US -->
-        <section id="about-us"></section>
-        <div class="container">
-            <div class="about-us">
-                <h2>About Us</h2>
-                <div class="box">
-                    <div class="info-box">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dignissimos nihil fuga
-                            aliquid asperiores nisi perspiciatis eligendi cupiditate quibusdam eveniet, vitae commodi
-                            quam quae sit eum porro unde omnis. Explicabo.
-                        </p>
-                    </div>
-                    <div class="image-box">
-                        <img src="./svg/aboutUs.svg" alt="" />
+        <section id="about-us">
+            <div class="container">
+                <div class="about-us">
+                    <h2>About Us</h2>
+                    <div class="box">
+                        <div class="info-box">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dignissimos nihil
+                                fuga aliquid asperiores nisi perspiciatis eligendi cupiditate quibusdam eveniet, vitae
+                                commodi quam quae sit eum porro unde omnis. Explicabo.
+                            </p>
+                        </div>
+                        <div class="image-box">
+                            <img src="./svg/aboutUs.svg" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- END ABOUT US -->
 
         <!-- START OUR SKILLS -->
-        <section id="our-skills"></section>
-        <div class="our-skills">
-            <div class="container">
-                <h2>Our Skills</h2>
-                <div class="box">
-                    <div class="image-box">
-                        <img src="./svg/ourSkills.svg" alt="" />
-                    </div>
-                    <div class="info-box">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis perferendis, esse explicabo
-                            ducimus harum, possimus eaque, molestias aut amet repellat facere cupiditate eligendi
-                            itaque. Iure doloribus vero sunt distinctio amet?
-                        </p>
-                    </div>
-                </div>
-                <div class="skills-progress-box">
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/c++.svg" alt="Cpp Logo" />
-                        <div class="progress-container">
-                            <span data-progress="70%" class="cpp-progress progress"></span>
+        <section id="our-skills">
+            <div class="our-skills secondary-bgc-section">
+                <div class="container">
+                    <h2>Our Skills</h2>
+                    <div class="box">
+                        <div class="image-box">
+                            <img src="./svg/ourSkills.svg" alt="" />
+                        </div>
+                        <div class="info-box">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis perferendis, esse
+                                explicabo ducimus harum, possimus eaque, molestias aut amet repellat facere cupiditate
+                                eligendi itaque. Iure doloribus vero sunt distinctio amet?
+                            </p>
                         </div>
                     </div>
-
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/html-5-logo.svg" alt="HTML Logo" />
-                        <div class="progress-container">
-                            <span data-progress="90%" class="html-progress progress"></span>
+                    <div class="skills-progress-box">
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/c++.svg" alt="Cpp Logo" />
+                            <div class="progress-container">
+                                <span data-progress="70%" class="cpp-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/css-3-logo.svg" alt="CSS Logo" />
-                        <div class="progress-container">
-                            <span data-progress="75%" class="css-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/html-5-logo.svg" alt="HTML Logo" />
+                            <div class="progress-container">
+                                <span data-progress="90%" class="html-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/js-logo.svg" alt="JS Logo" />
-                        <div class="progress-container">
-                            <span data-progress="40%" class="js-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/css-3-logo.svg" alt="CSS Logo" />
+                            <div class="progress-container">
+                                <span data-progress="75%" class="css-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/python.svg" alt="Python Logo" />
-                        <div class="progress-container">
-                            <span data-progress="96%" class="py-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/js-logo.svg" alt="JS Logo" />
+                            <div class="progress-container">
+                                <span data-progress="40%" class="js-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/php.svg" alt="PHP Logo" />
-                        <div class="progress-container">
-                            <span data-progress="66%" class="php-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/python.svg" alt="Python Logo" />
+                            <div class="progress-container">
+                                <span data-progress="96%" class="py-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/sql-database.svg" alt="SQL Logo" />
-                        <div class="progress-container">
-                            <span data-progress="88%" class="sql-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/php.svg" alt="PHP Logo" />
+                            <div class="progress-container">
+                                <span data-progress="66%" class="php-progress progress"></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-div">
-                        <img class="skill-logo" src="./svg/react.svg" alt="React Logo" />
-                        <div class="progress-container">
-                            <span data-progress="70%" class="react-progress progress"></span>
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/sql-database.svg" alt="SQL Logo" />
+                            <div class="progress-container">
+                                <span data-progress="88%" class="sql-progress progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="progress-div">
+                            <img class="skill-logo" src="./svg/react.svg" alt="React Logo" />
+                            <div class="progress-container">
+                                <span data-progress="70%" class="react-progress progress"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- END OUR SKILLS -->
 
         <!-- START GALLERY -->
-        <section id="gallery"></section>
-        <div class="container">
-            <div class="gallery">
-                <h2>Gallery</h2>
-                <div class="image-box">
-                    <img src="" alt="" />
+        <section id="gallery">
+            <div class="container">
+                <div class="gallery">
+                    <h2>Gallery</h2>
+                    <div class="image-box"></div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- START IMAGE POPUP -->
         <div class="popup-container">
             <div class="image-holder">
@@ -196,109 +224,179 @@
         <!-- END GALLERY -->
 
         <!-- START TIMELINE -->
-        <section id="timeline"></section>
-        <div class="timeline">
-            <div class="container timeline-cont">
-                <h2>Timeline</h2>
-                <div data-year="2023" class="line-2023">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
-                        inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
-                        nesciunt laboriosam nostrum sequi itaque eius quam.
-                    </p>
-                    <img loading="lazy" src="svg/timeLine23.svg" alt="Line 2023 Image" />
+        <section id="timeline">
+            <div class="timeline secondary-bgc-section">
+                <div class="container timeline-cont">
+                    <h2>Timeline</h2>
+                    <div data-year="2023" class="line-2023">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
+                            inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
+                            nesciunt laboriosam nostrum sequi itaque eius quam.
+                        </p>
+                        <img loading="lazy" src="svg/timeLine23.svg" alt="Line 2023 Image" />
+                    </div>
+                    <div data-year="2024" class="line-2024">
+                        <img loading="lazy" src="svg/timeLine24.svg" alt="Line 2024 Image" />
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
+                            inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
+                            nesciunt laboriosam nostrum sequi itaque eius quam.
+                        </p>
+                    </div>
+                    <div data-year="2025" class="line-2025">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
+                            inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
+                            nesciunt laboriosam nostrum sequi itaque eius quam.
+                        </p>
+                        <img loading="lazy" src="svg/timeLine25.svg" alt="Line 2025 Image" />
+                    </div>
+                    <div data-year="2026" class="line-2026">
+                        <img loading="lazy" src="svg/timeLine26.svg" alt="Line 2026 Image" />
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
+                            inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
+                            nesciunt laboriosam nostrum sequi itaque eius quam.
+                        </p>
+                    </div>
+                    <span class="vertical-line"></span>
                 </div>
-                <div data-year="2024" class="line-2024">
-                    <img loading="lazy" src="svg/timeLine24.svg" alt="Line 2024 Image" />
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
-                        inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
-                        nesciunt laboriosam nostrum sequi itaque eius quam.
-                    </p>
-                </div>
-                <div data-year="2025" class="line-2025">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
-                        inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
-                        nesciunt laboriosam nostrum sequi itaque eius quam.
-                    </p>
-                    <img loading="lazy" src="svg/timeLine25.svg" alt="Line 2025 Image" />
-                </div>
-                <div data-year="2026" class="line-2026">
-                    <img loading="lazy" src="svg/timeLine26.svg" alt="Line 2026 Image" />
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
-                        inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
-                        nesciunt laboriosam nostrum sequi itaque eius quam.
-                    </p>
-                </div>
-                <span class="vertical-line"></span>
             </div>
-        </div>
+        </section>
         <!-- END TIMELINE -->
 
         <!-- START OUR FEATURES -->
-        <div class="our-features">
-            <h2>Our Features</h2>
-            <div class="container">
-                <div class="feature-box">
-                    <img src="svg/featureCould.svg" alt="Cloud Storage" />
-                    <h3>Cloud Storage</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <img src="svg/featureMobile.svg" alt="Mobile Ready" />
-                    <h3>Mobile Ready</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <img src="svg/featureIntegration.svg" alt="Integration" />
-                    <h3>Integration</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <img src="svg/featureHighPerformance.svg" alt="High Performance" />
-                    <h3>High Performance</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <img src="svg/featureAutoBackup.svg" alt="Auto Backup" />
-                    <h3>Auto Backup</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <img src="svg/featureScalability.svg" alt="Scalability" />
-                    <h3>Scalability</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed rem
-                        illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates aliquid
-                        distinctio ad ullam minima, necessitatibus nulla!
-                    </p>
+        <section id="feature">
+            <div class="our-features">
+                <h2>Our Features</h2>
+                <div class="container">
+                    <div class="feature-box">
+                        <img src="svg/featureCould.svg" alt="Cloud Storage" />
+                        <h3>Cloud Storage</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="svg/featureMobile.svg" alt="Mobile Ready" />
+                        <h3>Mobile Ready</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="svg/featureIntegration.svg" alt="Integration" />
+                        <h3>Integration</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="svg/featureHighPerformance.svg" alt="High Performance" />
+                        <h3>High Performance</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="svg/featureAutoBackup.svg" alt="Auto Backup" />
+                        <h3>Auto Backup</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="svg/featureScalability.svg" alt="Scalability" />
+                        <h3>Scalability</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
+                            rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
+                            aliquid distinctio ad ullam minima, necessitatibus nulla!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </section>
         <!-- END OUR FEATURES -->
+
+        <!-- START Testimonials Section -->
+        <section id="testimonials">
+                <div class="testimonials secondary-bgc-section">
+                    <h2 class="container-header">Testimonials</h2>
+                    <div class="container">
+                        <div class="testimoni-box1">
+                            <div class="comment">
+                                <img src="svg/tstmA1.svg" alt="" />
+                                <h4>Omer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
+                                    aperiam nemo voluptas sunt officiis odit voluptatibus
+                                </p>
+                            </div>
+                            <div class="comment">
+                                <img src="svg/tstmA2.svg" alt="" />
+                                <h4>Mrco</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
+                                    aperiam nemo voluptas sunt officiis odit voluptatibus
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimoni-box2">
+                            <div class="comment">
+                                <img src="svg/tstmA3.svg" alt="" />
+                                <h4>Jaison</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
+                                    aperiam nemo voluptas sunt officiis odit voluptatibus
+                                </p>
+                            </div>
+                            <div class="comment">
+                                <img src="svg/tstmA4.svg" alt="" />
+                                <h4>Ali</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
+                                    aperiam nemo voluptas sunt officiis odit voluptatibus
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- END Testimonials Section -->
+
+        <section id="contact">
+            <div class="contact">
+                <div class="overlay"></div>
+                <h2 class="container-header">Contact Us</h2>
+                <div class="container">
+                    <form action="#home">
+                        <div class="left">
+                            <input required type="text"  placeholder="Your First Name" name="fist-name">
+                            <input required type="text" placeholder="Your Last Name" name="last-name">
+                            <input required type="email" placeholder="Your Email" name="email">
+                            <input required type="tel" placeholder="Your Phone" name="phone">
+                        </div>
+                        <div class="right">
+                            <input required type="text" placeholder="Subject">
+                            <textarea required name="message" placeholder="Your Message"></textarea>
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <script src="js/master.js"></script>
         <script src="js/designEffect.js"></script>

@@ -199,9 +199,97 @@ function getClickImagePathAndName() {
                 imageInfo.iName = image.getAttribute("alt") ?? "";
                 imageInfo.iPath = image.getAttribute("src") ?? "";
                 imagePopup(imageInfo);
-            };
+            }
         });
     });
+}
+
+function activeNavBullet() {
+    const sections = document.querySelectorAll("section");
+    const bullets = document.querySelectorAll(".nav-bullets div");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    bullets.forEach((bullet) => {
+                        bullet.classList.toggle("nav-bullet-active", bullet.dataset.navSection === id);
+                    });
+                }
+            });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+}
+
+function goSectionsThroughNavBullets() {
+    // Get all nav bullets
+    const bullets = document.querySelectorAll(".nav-bullets div");
+    const sections = document.querySelectorAll("section");
+
+    bullets.forEach((bullet) => {
+        bullet.addEventListener("click", (e) => {
+            sections.forEach((section) => {
+                if (section.id === bullet.dataset.navSection) {
+                    section.scrollIntoView();
+                }
+            });
+        });
+    });
+}
+
+function removeActiveClass(elementArray) {
+    console.log(typeof elementArray);
+    if (elementArray) {
+        elementArray.forEach((e) => {
+            e.classList.remove("active");
+        });
+    }
+}
+
+function navBulletsShowOption() {
+    const navSBtns = document.querySelectorAll(
+        ".nav-bullets-option .nav-btn .show, .nav-bullets-option .nav-btn .hide"
+    );
+    const navBullets = document.querySelector(".nav-bullets");
+
+    removeActiveClass(navSBtns);
+    if (localStorage.getItem("navShow") === "hide") {
+        navBullets.style.display = "none";
+        navSBtns[1].classList.add("active");
+    } else {
+        navBullets.style.display = "block";
+        navSBtns[0].classList.add("active");
+    }
+
+    navSBtns.forEach((nvSBtn) => {
+        nvSBtn.addEventListener("click", (e) => {
+            if (nvSBtn.classList.contains("show")) {
+                navBullets.style.display = "block";
+                removeActiveClass(navSBtns);
+                nvSBtn.classList.add("active");
+                localStorage.setItem("navShow", "show");
+            } else if (nvSBtn.classList.contains("hide")) {
+                navBullets.style.display = "none";
+                removeActiveClass(navSBtns);
+                nvSBtn.classList.add("active");
+                localStorage.setItem("navShow", "hide");
+            }
+        });
+    });
+}
+
+// Reset (clear local storage)
+function resetThePage() {
+    document.querySelector(".reset-option .reset-btn").addEventListener("click", () => {
+        localStorage.clear();
+        window.location.reload();
+    })
 }
 
 // Calling functions
@@ -215,6 +303,7 @@ initializeRandomBG();
 setBackgroundImage(localStorage.getItem("currentImagePath") ?? "../images/03.jpg");
 fillingImageInGallery(18);
 getClickImagePathAndName();
-
-
-
+goSectionsThroughNavBullets();
+activeNavBullet();
+navBulletsShowOption();
+resetThePage();
