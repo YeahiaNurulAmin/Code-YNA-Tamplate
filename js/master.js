@@ -79,7 +79,17 @@ function toggleFlipIcon() {
     });
 }
 
+// Change main logo color
+function changeMainLogoColor(color) {
+    const logoText = document.querySelector("header .logo svg .main-logo-test");
+    const logo = document.querySelector("header .logo svg rect");
+    logoText.setAttribute("fill", color ?? document.documentElement.style.getPropertyValue("--primary-color"));  
+    logo.setAttribute("fill", color ?? document.documentElement.style.getPropertyValue("--primary-color"));
+}
+
 function setMainColor(color) {
+    changeMainLogoColor(mainColor);
+
     LiColor.forEach((i) => {
         i.addEventListener("click", (e) => {
             e.currentTarget.parentElement.querySelectorAll(".active").forEach((j) => {
@@ -87,8 +97,8 @@ function setMainColor(color) {
             });
 
             localStorage.setItem("mainColor", e.currentTarget.dataset.color);
-
             document.documentElement.style.setProperty("--primary-color", e.currentTarget.dataset.color);
+            changeMainLogoColor(e.currentTarget.dataset.color);
 
             e.currentTarget.classList.add("active");
         });
@@ -221,7 +231,7 @@ function activeNavBullet() {
         },
         {
             threshold: 0.2,
-        }
+        },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -254,7 +264,7 @@ function removeActiveClass(elementArray) {
 
 function navBulletsShowOption() {
     const navSBtns = document.querySelectorAll(
-        ".nav-bullets-option .nav-btn .show, .nav-bullets-option .nav-btn .hide"
+        ".nav-bullets-option .nav-btn .show, .nav-bullets-option .nav-btn .hide",
     );
     const navBullets = document.querySelector(".nav-bullets");
 
@@ -289,8 +299,34 @@ function resetThePage() {
     document.querySelector(".reset-option .reset-btn").addEventListener("click", () => {
         localStorage.clear();
         window.location.reload();
+    });
+}
+
+// Open nav bar
+function openNavBar() {
+    const navBarIcon = document.querySelector("header nav i");
+    const navUl = document.querySelector("header nav ul");
+
+    
+    navBarIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (navUl.style.display === "" || navUl.style.display === "none") {
+            navUl.style.display = "flex";
+        } else {
+            navUl.style.display = "none";
+        }
+    });
+
+    navUl.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    document.body.addEventListener("click", (e) => {
+        navUl.style.display = "none";
     })
 }
+
+
 
 // Calling functions
 animateProgress();
@@ -307,3 +343,5 @@ goSectionsThroughNavBullets();
 activeNavBullet();
 navBulletsShowOption();
 resetThePage();
+openNavBar();
+changeMainLogoColor();

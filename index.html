@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Code YNA</title>
+        <title>YNA Code</title>
         <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,7 +63,7 @@
             <div data-nav-section="timeline"><span>Timeline</span></div>
             <div data-nav-section="feature"><span>Our Features</span></div>
             <div data-nav-section="testimonials"><span>Testimonials</span></div>
-            <div data-nav-section="contact"><span>Contact</span></div>
+            <div data-nav-section="contact"><span>Contact Us</span></div>
         </div>
         <!-- END NAV BULLETS -->
 
@@ -76,18 +76,29 @@
                         <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0" y="0" width="40" height="40" rx="8" fill="#0A2540" />
                             <text x="12" y="26" font-size="18" fill="#00B4D8" font-family="Arial">{ }</text>
-                            <text x="50" y="26" font-size="18" fill="#0A2540" font-family="Arial" font-weight="bold">
-                                Code YNA
+                            <text
+                                class="main-logo-test"
+                                x="50"
+                                y="26"
+                                font-size="18"
+                                fill="#0A2540"
+                                font-family="Arial"
+                                font-weight="bold">
+                                YNA Code
                             </text>
                         </svg>
                     </div>
                     <nav>
+                        <i class="fa-solid fa-bars"></i>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about-us">About Us</a></li>
                             <li><a href="#our-skills">Our Skills</a></li>
                             <li><a href="#gallery">Gallery</a></li>
                             <li><a href="#timeline">Timeline</a></li>
+                            <li><a href="#feature">Our Feature</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -332,50 +343,51 @@
 
         <!-- START Testimonials Section -->
         <section id="testimonials">
-                <div class="testimonials secondary-bgc-section">
-                    <h2 class="container-header">Testimonials</h2>
-                    <div class="container">
-                        <div class="testimoni-box1">
-                            <div class="comment">
-                                <img src="svg/tstmA1.svg" alt="" />
-                                <h4>Omer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
-                                    aperiam nemo voluptas sunt officiis odit voluptatibus
-                                </p>
-                            </div>
-                            <div class="comment">
-                                <img src="svg/tstmA2.svg" alt="" />
-                                <h4>Mrco</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
-                                    aperiam nemo voluptas sunt officiis odit voluptatibus
-                                </p>
-                            </div>
+            <div class="testimonials secondary-bgc-section">
+                <h2 class="container-header">Testimonials</h2>
+                <div class="container">
+                    <div class="testimoni-box1">
+                        <div class="comment">
+                            <img src="svg/tstmA1.svg" alt="" />
+                            <h4>Omer</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
+                                nemo voluptas sunt officiis odit voluptatibus
+                            </p>
                         </div>
-                        <div class="testimoni-box2">
-                            <div class="comment">
-                                <img src="svg/tstmA3.svg" alt="" />
-                                <h4>Jaison</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
-                                    aperiam nemo voluptas sunt officiis odit voluptatibus
-                                </p>
-                            </div>
-                            <div class="comment">
-                                <img src="svg/tstmA4.svg" alt="" />
-                                <h4>Ali</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque
-                                    aperiam nemo voluptas sunt officiis odit voluptatibus
-                                </p>
-                            </div>
+                        <div class="comment">
+                            <img src="svg/tstmA2.svg" alt="" />
+                            <h4>Mrco</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
+                                nemo voluptas sunt officiis odit voluptatibus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimoni-box2">
+                        <div class="comment">
+                            <img src="svg/tstmA3.svg" alt="" />
+                            <h4>Jaison</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
+                                nemo voluptas sunt officiis odit voluptatibus
+                            </p>
+                        </div>
+                        <div class="comment">
+                            <img src="svg/tstmA4.svg" alt="" />
+                            <h4>Ali</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
+                                nemo voluptas sunt officiis odit voluptatibus
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- END Testimonials Section -->
 
+        <!-- START CONTACT -->
         <section id="contact">
             <div class="contact">
                 <div class="overlay"></div>
@@ -383,20 +395,31 @@
                 <div class="container">
                     <form action="#home">
                         <div class="left">
-                            <input required type="text"  placeholder="Your First Name" name="fist-name">
-                            <input required type="text" placeholder="Your Last Name" name="last-name">
-                            <input required type="email" placeholder="Your Email" name="email">
-                            <input required type="tel" placeholder="Your Phone" name="phone">
+                            <input required type="text" placeholder="Your First Name" name="fist-name" />
+                            <input required type="text" placeholder="Your Last Name" name="last-name" />
+                            <input required type="email" placeholder="Your Email" name="email" />
+                            <input required type="tel" placeholder="Your Phone" name="phone" />
                         </div>
                         <div class="right">
-                            <input required type="text" placeholder="Subject">
+                            <input required type="text" placeholder="Subject" />
                             <textarea required name="message" placeholder="Your Message"></textarea>
-                            <input type="submit" value="Send">
+                            <input type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
+
+                <!-- START FOOTER -->
+                <footer>
+                    <div>
+                        <h3>YNA Code</h3>
+                        <p>We build reliable and modern software solutions.</p>
+                        <p class="copyright">© <span class="year">2026 YNA Code.</span> All rights reserved.</p>
+                    </div>
+                </footer>
+                <!-- END FOOTER -->
             </div>
         </section>
+        <!-- END CONTACT -->
 
         <script src="js/master.js"></script>
         <script src="js/designEffect.js"></script>

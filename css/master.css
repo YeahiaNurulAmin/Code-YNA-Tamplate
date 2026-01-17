@@ -161,6 +161,7 @@ body {
     position: fixed;
     right: 0px;
     top: 50%;
+    z-index: 3;
 }
 .nav-bullets div {
     width: 15px;
@@ -248,10 +249,14 @@ header nav {
     color: var(--primary-color);
     position: relative;
 }
+header nav i {
+    visibility: hidden;
+}
 header nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+    transition: 0.3s;
 }
 header nav ul li {
     padding-right: 25px;
@@ -631,7 +636,7 @@ header nav ul li a:hover {
 /* START testimonials */
 .testimonials .container {
     display: flex;
-    margin-bottom: 150px;
+    padding-top: 0px;
 }
 .testimonials .testimoni-box2 {
     margin-top: 150px;
@@ -677,7 +682,6 @@ header nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
-    
 }
 .contact .container {
     position: relative;
@@ -703,7 +707,8 @@ header nav ul li a:hover {
     flex-direction: column;
     width: 50%;
 }
-.contact .container input, textarea {
+.contact .container input,
+textarea {
     background-color: var(--background-color);
     opacity: var(--bg-opacity);
     padding: 8px;
@@ -711,13 +716,13 @@ header nav ul li a:hover {
     align-self: center;
     margin: 12px;
     border-radius: 10px;
-
     border: none;
     outline-color: var(--primary-color);
     height: 40px;
     color: var(--primary-text-color);
 }
-.contact .container input:focus:not([type="submit"]), textarea:focus {
+.contact .container input:focus:not([type="submit"]),
+textarea:focus {
     outline: 5px solid var(--primary-color);
     color: var(--primary-text-color);
 }
@@ -729,7 +734,452 @@ input[type="submit"]:hover {
     outline: 5px solid var(--primary-color);
     cursor: pointer;
 }
-
-
-
 /* END CONTACT */
+
+/* START FOOTER */
+footer {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    background-color: var(--background-color);
+    opacity: var(--bg-opacity);
+    text-align: center;
+    padding: 20px 0;
+}
+footer h3, p span {
+    color: var(--primary-color);
+    
+}
+p {
+    color: var(--secondary-text-color);
+    /* padding: 10px; */
+}
+/* END FOOTER */
+
+/* START media queries */
+/* Base responsive styles for skill logos */
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1080px) {
+    .container {
+        width: 90%;
+    }
+
+    .container-header {
+        font-size: 35px;
+        margin-bottom: 60px;
+    }
+    /* setting box */
+    .settings-box .setting-icon:active {
+        color: var(--secondary-color);
+    }
+
+    /* Navigation */
+    header nav ul li {
+        padding-right: 15px;
+    }
+    header nav ul li a:active {
+        color: var(--secondary-color);
+    }
+
+    /* About Us */
+    .about-us .box {
+        flex-direction: column;
+    }
+
+    .about-us .info-box,
+    .about-us .image-box {
+        width: 100%;
+    }
+
+    .about-us .image-box img {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    /* Our Skills */
+    .our-skills .box {
+        flex-direction: column;
+    }
+
+    .our-skills .box .image-box,
+    .our-skills .box .info-box {
+        width: 100%;
+    }
+
+    .our-skills .box .image-box img {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .our-skills .skills-progress-box .progress-div {
+        margin: 30px 20px;
+    }
+
+    /* Timeline */
+    .timeline div {
+        margin-bottom: 150px;
+    }
+
+    .timeline div p {
+        font-size: large;
+    }
+
+    /* Features */
+    .our-features .feature-box {
+        width: 40%;
+        margin: 0 20px 100px 20px;
+    }
+
+    /* Contact Form */
+    .contact .container {
+        padding-top: 0;
+    }
+    .contact .container form {
+        flex-direction: column;
+    }
+
+    .contact .container form .left,
+    .contact .container form .right {
+        width: 100%;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 970px) {
+    .container-header {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .settings-box .setting-icon:active {
+        color: var(--secondary-color);
+    }
+
+    /* nav bullets */
+    .nav-bullets div {
+        width: 10px;
+        height: 10px;
+    }
+    .nav-bullet-active {
+        background-color: var(--primary-color) !important;
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .nav-bullets div:hover {
+        cursor: pointer;
+        background-color: var(--primary-color);
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Header Navigation */
+    header {
+        /* flex-direction: column; */
+        padding: 10px;
+    }
+
+    header .logo {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav i {
+        display: block ;
+        height: fit-content;
+        cursor: pointer;
+        visibility: visible;
+        font-size: xx-large;
+    }
+    header nav i:active {
+        color: var(--secondary-color) !important;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 5px 10px;
+    }
+
+    /* Introduction Text */
+    .introduction-text h1 {
+        font-size: 35px;
+    }
+
+    .introduction-text p {
+        font-size: 16px;
+    }
+
+    /* About Us & Skills */
+    .about-us .info-box p,
+    .our-skills .box .info-box p {
+        font-size: large;
+    }
+
+    /* Gallery */
+    .gallery .image-box img {
+        width: 250px;
+        margin: 8px;
+    }
+
+    /* Popup */
+    .popup-container .image-holder {
+        width: 90vw;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .popup-container .image-holder .popup-image {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: contain;
+    }
+
+    /* Timeline */
+    .timeline div {
+        flex-direction: column !important;
+        margin-bottom: 120px;
+    }
+
+    .timeline div p,
+    .timeline div img {
+        width: 100% !important;
+        margin: 20px 0;
+    }
+    .timeline .timeline-cont {
+        margin-bottom: -100px;
+    }
+
+    .timeline .timeline-cont .vertical-line {
+        display: none;
+    }
+
+    .timeline .timeline-cont [class*="line-"]::after {
+        position: relative;
+        left: 0;
+        top: -480px;
+        transform: none;
+        display: block;
+        margin: -12% auto 20px auto;
+        width: fit-content;
+    }
+
+    /* Features */
+    .our-features .feature-box {
+        width: 80%;
+        margin: 0 auto 80px auto;
+    }
+
+    .our-features .feature-box img {
+        width: 120px;
+    }
+
+    /* Testimonials */
+    .testimonials .container {
+        flex-direction: column;
+    }
+
+    .testimonials .testimoni-box2 {
+        margin-top: 0;
+    }
+
+    .testimonials .comment {
+        margin: 30px 20px;
+    }
+
+    /* Contact */
+    .contact .container input,
+    .contact .container textarea {
+        width: 90%;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 20px 0 20px;
+    }
+
+    .container-header {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    /* Header */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 8px 0;
+    }
+
+    /* Introduction */
+    .introduction-text {
+        width: 90%;
+        padding: 20px 10px;
+        top: 80%;
+    }
+
+    .introduction-text h1 {
+        font-size: 28px;
+    }
+
+    .introduction-text p {
+        font-size: 14px;
+    }
+
+    /* nav bullets */
+    .nav-bullets div {
+        width: 1px;
+        height: 1px;
+    }
+    .nav-bullet-active {
+        background-color: var(--primary-color) !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .nav-bullets div:hover {
+        cursor: pointer;
+        background-color: var(--primary-color);
+        width: 10px;
+        height: 10px;
+    }
+
+    /* About Us & Skills */
+    .about-us .info-box p,
+    .our-skills .box .info-box p {
+        font-size: medium;
+        line-height: 1.6;
+    }
+
+    .about-us .image-box img,
+    .our-skills .box .image-box img {
+        width: 100%;
+    }
+
+    /* Skills Progress */
+    .our-skills .skills-progress-box .progress-div {
+        /* height: auto; */
+        align-items: center;
+    }
+
+    .our-skills .skills-progress-box .progress-div img {
+        margin-top: 10px;
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .our-skills .skills-progress-box .progress-container {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* Gallery */
+    .gallery .image-box img {
+        width: 90%;
+        margin: 5px auto;
+        display: block;
+    }
+
+    /* Popup */
+    .popup-container .image-holder {
+        width: 95vw;
+        padding: 5px;
+    }
+
+    .popup-container .image-holder h3 {
+        font-size: 14px;
+    }
+
+    .popup-container .image-holder .close-btn {
+        font-size: x-large;
+        right: 5px;
+        top: 5px;
+    }
+
+    /* Timeline */
+    .timeline div {
+        margin-bottom: 100px;
+    }
+
+    .timeline div p {
+        font-size: medium;
+        line-height: 1.6;
+    }
+
+    .timeline .timeline-cont [class*="line-"]::after {
+        font-size: large;
+        padding: 8px 10px;
+        margin: 8% auto 20px auto;
+    }
+
+    /* Features */
+    .our-features .feature-box {
+        width: 90%;
+        margin: 0 auto 60px auto;
+    }
+
+    .our-features .feature-box img {
+        width: 100px;
+    }
+
+    .our-features .feature-box h3 {
+        font-size: large;
+    }
+
+    .our-features .feature-box p {
+        font-size: small;
+    }
+
+    /* Testimonials */
+    .testimonials .comment {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .testimonials .comment img {
+        width: 40px;
+    }
+
+    .testimonials .comment h4 {
+        font-size: 14px;
+    }
+
+    .testimonials .comment p {
+        font-size: 13px;
+    }
+
+    /* Contact */
+    .contact {
+        padding-top: 30px;
+    }
+
+    .contact .container input,
+    .contact .container textarea {
+        width: 95%;
+        margin: 8px;
+    }
+
+    .contact .container textarea {
+        height: 150px;
+    }
+}
