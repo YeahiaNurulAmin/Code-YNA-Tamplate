@@ -2,11 +2,26 @@
 
 > A fully interactive, responsive landing page template featuring dynamic backgrounds, customizable themes, and a smooth user experience with modern web technologies.
 
+**🌐 Live Demo**: [https://ynacode.netlify.app/](https://ynacode.netlify.app/)
+
+---
+
+## 📑 Table of Contents
+- [Overview](#overview)
+- [✨ Key Features](#-key-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [📦 Installation & Setup](#-installation--setup)
+- [🎮 How to Use](#-how-to-use)
+- [🔧 Customization Guide](#-customization-guide)
+- [📋 Component Details](#-component-details)
+- [🌐 Browser Compatibility](#-browser-compatibility)
+- [📚 Learning Outcomes & Notes](#-learning-outcomes--notes)
+
+---
+
 ## Overview
 
 **YNA Code** is a professional landing page template designed for creative agencies and development portfolios. Built with vanilla JavaScript, this project demonstrates modern web development practices including DOM manipulation, localStorage integration, and responsive design patterns.
-
-**🌐 Live Demo**: [https://ynacode.netlify.app/](https://ynacode.netlify.app/)
 
 You can also open `index.html` locally in your browser to experience the dynamic interface with rotating backgrounds and interactive settings panel.
 
@@ -20,6 +35,10 @@ You can also open `index.html` locally in your browser to experience the dynamic
 | ⚙️ **Settings Panel** | Customizable theme panel with color picker, background controls, and navigation options |
 | 🎯 **Navigation Bullets** | Quick-access navigation sidebar for smooth scrolling to page sections |
 | 🎭 **Theme Customization** | Switch between predefined color themes with instant visual feedback |
+| 📊 **Animated Skills** | Skill progress bars that animate dynamically on scroll |
+| 🖼️ **Interactive Gallery** | Image gallery with full-screen popup view |
+| ⏳ **Timeline & Content** | Visually appealing timeline, features, and testimonials sections |
+| 📬 **Contact Form** | Ready-to-use contact form layout |
 | 📱 **Fully Responsive** | Optimized for desktop, tablet, and mobile devices |
 | 🚀 **Performance Optimized** | Minified assets and efficient DOM manipulation |
 
@@ -51,20 +70,20 @@ npm install
 ```
 
 ### Project Structure
-```
+```text
 Code YNA Template/
 ├── index.html                 # Main entry point
-├── package.json              # Dependencies configuration
+├── package.json               # Dependencies configuration
 ├── css/
-│   └── master.css           # Unified stylesheet with CSS variables
+│   └── master.css             # Unified stylesheet with CSS variables
 ├── js/
-│   ├── master.js            # Core functionality (BG rotation, settings)
-│   └── designEffect.js      # Animation effects & interactions
-├── images/                  # Background images (01.jpg - 09.jpg)
+│   ├── master.js              # Core functionality (BG rotation, settings)
+│   └── designEffect.js        # Animation effects & interactions
+├── images/                    # Background images (01.jpg - 09.jpg)
 ├── fontawesome-free-7.1.0-web/
-│   ├── css/                # Icon stylesheets
-│   ├── js/                 # Icon scripts
-│   └── webfonts/           # Icon font files
+│   ├── css/                   # Icon stylesheets
+│   ├── js/                    # Icon scripts
+│   └── webfonts/              # Icon font files
 └── README.md
 ```
 
@@ -145,6 +164,9 @@ Edit the SVG logo in [index.html](index.html#L78-L85):
 - Color theme switching with CSS variables
 - localStorage integration for persistence
 - Navigation bullet functionality
+- Skills progress animation on scroll
+- Interactive image gallery popup
+- Mobile navigation menu toggle
 
 **[designEffect.js](js/designEffect.js)**
 - Smooth animations and transitions
@@ -176,8 +198,9 @@ Edit the SVG logo in [index.html](index.html#L78-L85):
 
 ---
 
-## 📚 Learning Outcomes
+## 📚 Learning Outcomes & Notes
 
+### Learning Outcomes
 This project demonstrates:
 - DOM manipulation and event delegation
 - Browser localStorage API for state persistence
@@ -187,14 +210,8 @@ This project demonstrates:
 - SVG graphics and icon integration
 - Modern HTML5 semantic markup
 
----
-
-## 📝 Notes
-
+### Notes
 - Settings are saved to localStorage and persist across sessions
 - Images must follow sequential naming convention (01.jpg, 02.jpg, etc.)
 - All colors are easily configurable through CSS variables
 - The design follows mobile-first responsive approach
-
-
-
