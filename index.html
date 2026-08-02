@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Cairo:wght@300;400;600;700;800&display=swap"
             rel="stylesheet" />
         <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
         <link rel="stylesheet" href="css/master.css" />
@@ -20,11 +20,11 @@
                 <i class="setting-icon fa-solid fa-sliders fa-shake"></i>
             </div>
             <div class="setting-container">
-                <h3>Testing Options</h3>
+                <h3 data-i18n="testingOptions">Testing Options</h3>
 
                 <div class="setting-option">
                     <div class="color-options">
-                        <h4>Colors</h4>
+                        <h4 data-i18n="colors">Colors</h4>
                         <ul class="color-list">
                             <li class="active" data-color="#0A2540"></li>
                             <li data-color="#ff6347"></li>
@@ -40,21 +40,21 @@
                     </div>
 
                     <div class="random-bg-option">
-                        <h4>Random Backgrounds</h4>
-                        <span class="yes setting-btn">YES</span>
-                        <span class="no setting-btn">NO</span>
+                        <h4 data-i18n="randBackgrounds">Random Backgrounds</h4>
+                        <span class="yes setting-btn" data-i18n="yes">YES</span>
+                        <span class="no setting-btn" data-i18n="no">NO</span>
                     </div>
 
                     <div class="nav-bullets-option">
-                        <h4>Navigation Bullets</h4>
+                        <h4 data-i18n="navBullets">Navigation Bullets</h4>
                         <div class="nav-btn">
-                            <span class="show setting-btn active">SHOW</span>
-                            <span class="hide setting-btn">HIDE</span>
+                            <span class="show setting-btn active" data-i18n="showBtn">SHOW</span>
+                            <span class="hide setting-btn" data-i18n="hideBtn">HIDE</span>
                         </div>
                     </div>
 
                     <div class="reset-option">
-                        <div class="reset-btn setting-btn">RESET</div>
+                        <div class="reset-btn setting-btn" data-i18n="resetBtn">RESET</div>
                     </div>
                 </div>
             </div>
@@ -63,14 +63,14 @@
 
         <!-- START NAV BULLETS -->
         <div class="nav-bullets">
-            <div data-nav-section="home"><span>Home</span></div>
-            <div data-nav-section="about-us"><span>About Us</span></div>
-            <div data-nav-section="our-skills"><span>Our Skills</span></div>
-            <div data-nav-section="gallery"><span>Gallery</span></div>
-            <div data-nav-section="timeline"><span>Timeline</span></div>
-            <div data-nav-section="feature"><span>Our Features</span></div>
-            <div data-nav-section="testimonials"><span>Testimonials</span></div>
-            <div data-nav-section="contact"><span>Contact Us</span></div>
+            <div data-nav-section="home"><span data-i18n="home">Home</span></div>
+            <div data-nav-section="about-us"><span data-i18n="about">About Us</span></div>
+            <div data-nav-section="our-skills"><span data-i18n="skills">Our Skills</span></div>
+            <div data-nav-section="gallery"><span data-i18n="gallery">Gallery</span></div>
+            <div data-nav-section="timeline"><span data-i18n="timeline">Timeline</span></div>
+            <div data-nav-section="feature"><span data-i18n="features">Our Features</span></div>
+            <div data-nav-section="testimonials"><span data-i18n="testimonials">Testimonials</span></div>
+            <div data-nav-section="contact"><span data-i18n="contact">Contact Us</span></div>
         </div>
         <!-- END NAV BULLETS -->
 
@@ -79,7 +79,7 @@
             <div class="landing-page">
                 <div class="overlay"></div>
                 <header>
-                    <div class="logo">
+                    <div class="logo" dir="ltr">
                         <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0" y="0" width="40" height="40" rx="8" fill="#0A2540" />
                             <text x="12" y="26" font-size="18" fill="#00B4D8" font-family="Arial">{ }</text>
@@ -98,16 +98,16 @@
                     <nav>
                         <i class="fa-solid fa-bars"></i>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about-us">About Us</a></li>
-                            <li><a href="#our-skills">Our Skills</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#timeline">Timeline</a></li>
-                            <li><a href="#feature">Our Feature</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#home" data-i18n="home">Home</a></li>
+                            <li><a href="#about-us" data-i18n="about">About Us</a></li>
+                            <li><a href="#our-skills" data-i18n="skills">Our Skills</a></li>
+                            <li><a href="#gallery" data-i18n="gallery">Gallery</a></li>
+                            <li><a href="#timeline" data-i18n="timeline">Timeline</a></li>
+                            <li><a href="#feature" data-i18n="features">Our Feature</a></li>
+                            <li><a href="#testimonials" data-i18n="testimonials">Testimonials</a></li>
+                            <li><a href="#contact" data-i18n="contact">Contact Us</a></li>
                             <li class="dark-mode-item">
-                                <button class="dark-mode-toggle" type="button" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
+                                <button class="dark-mode-toggle" type="button" title="Toggle Dark Mode" aria-label="Toggle Dark Mode" data-i18n-title="darkModeTitle">
                                     <span class="toggle-track">
                                         <span class="toggle-thumb">
                                             <i class="fa-solid fa-moon"></i>
@@ -116,8 +116,11 @@
                                     </span>
                                 </button>
                             </li>
+                            <li class="lang-item">
+                                <button class="lang-toggle" type="button">عربي</button>
+                            </li>
                         </ul>
-                        <button class="dark-mode-toggle" type="button" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
+                        <button class="dark-mode-toggle" type="button" title="Toggle Dark Mode" aria-label="Toggle Dark Mode" data-i18n-title="darkModeTitle">
                             <span class="toggle-track">
                                 <span class="toggle-thumb">
                                     <i class="fa-solid fa-moon"></i>
@@ -125,11 +128,16 @@
                                 </span>
                             </span>
                         </button>
+                        <button class="lang-toggle" type="button">عربي</button>
                     </nav>
                 </header>
                 <div class="introduction-text">
-                    <h1>We Are <span id="headerSpan">Creative</span> Agency</h1>
-                    <p>
+                    <h1>
+                        <span data-i18n="heroIntro1">We Are</span>
+                        <span id="headerSpan" data-i18n="heroIntro2">Creative</span>
+                        <span data-i18n="heroIntro3">Agency</span>
+                    </h1>
+                    <p data-i18n="heroDesc">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vitae vel magni quia dolorem
                         minus!
                     </p>
@@ -142,10 +150,10 @@
         <section id="about-us">
             <div class="container">
                 <div class="about-us">
-                    <h2>About Us</h2>
+                    <h2 data-i18n="about">About Us</h2>
                     <div class="box">
                         <div class="info-box">
-                            <p>
+                            <p data-i18n="aboutUsDesc">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dignissimos nihil
                                 fuga aliquid asperiores nisi perspiciatis eligendi cupiditate quibusdam eveniet, vitae
                                 commodi quam quae sit eum porro unde omnis. Explicabo.
@@ -164,13 +172,13 @@
         <section id="our-skills">
             <div class="our-skills secondary-bgc-section">
                 <div class="container">
-                    <h2>Our Skills</h2>
+                    <h2 data-i18n="skills">Our Skills</h2>
                     <div class="box">
                         <div class="image-box">
                             <img src="./svg/ourSkills.svg" alt="" />
                         </div>
                         <div class="info-box">
-                            <p>
+                            <p data-i18n="skillsDesc">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis perferendis, esse
                                 explicabo ducimus harum, possimus eaque, molestias aut amet repellat facere cupiditate
                                 eligendi itaque. Iure doloribus vero sunt distinctio amet?
@@ -243,7 +251,7 @@
         <section id="gallery">
             <div class="container">
                 <div class="gallery">
-                    <h2>Gallery</h2>
+                    <h2 data-i18n="gallery">Gallery</h2>
                     <div class="image-box"></div>
                 </div>
             </div>
@@ -251,7 +259,7 @@
         <!-- START IMAGE POPUP -->
         <div class="popup-container">
             <div class="image-holder">
-                <h3>Image Name</h3>
+                <h3 data-i18n="popupName">Image Name</h3>
                 <i class="close-btn fa-solid fa-xmark"></i>
                 <img class="popup-image" src="images/gi10.jpg" alt="" />
             </div>
@@ -263,9 +271,9 @@
         <section id="timeline">
             <div class="timeline secondary-bgc-section">
                 <div class="container timeline-cont">
-                    <h2>Timeline</h2>
+                    <h2 data-i18n="timeline">Timeline</h2>
                     <div data-year="2023" class="line-2023">
-                        <p>
+                        <p data-i18n="feat_2023">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
                             inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
                             nesciunt laboriosam nostrum sequi itaque eius quam.
@@ -274,14 +282,14 @@
                     </div>
                     <div data-year="2024" class="line-2024">
                         <img loading="lazy" src="svg/timeLine24.svg" alt="Line 2024 Image" />
-                        <p>
+                        <p data-i18n="feat_2024">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
                             inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
                             nesciunt laboriosam nostrum sequi itaque eius quam.
                         </p>
                     </div>
                     <div data-year="2025" class="line-2025">
-                        <p>
+                        <p data-i18n="feat_2025">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
                             inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
                             nesciunt laboriosam nostrum sequi itaque eius quam.
@@ -290,7 +298,7 @@
                     </div>
                     <div data-year="2026" class="line-2026">
                         <img loading="lazy" src="svg/timeLine26.svg" alt="Line 2026 Image" />
-                        <p>
+                        <p data-i18n="feat_2026">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, illum? Porro consequatur
                             inventore tempore omnis iste maiores, voluptatum delectus magnam voluptatibus, fugit dolor
                             nesciunt laboriosam nostrum sequi itaque eius quam.
@@ -305,12 +313,12 @@
         <!-- START OUR FEATURES -->
         <section id="feature">
             <div class="our-features">
-                <h2>Our Features</h2>
+                <h2 data-i18n="features">Our Features</h2>
                 <div class="container">
                     <div class="feature-box">
                         <img src="svg/featureCould.svg" alt="Cloud Storage" />
-                        <h3>Cloud Storage</h3>
-                        <p>
+                        <h3 data-i18n="featCloud">Cloud Storage</h3>
+                        <p data-i18n="featCloudDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -318,8 +326,8 @@
                     </div>
                     <div class="feature-box">
                         <img src="svg/featureMobile.svg" alt="Mobile Ready" />
-                        <h3>Mobile Ready</h3>
-                        <p>
+                        <h3 data-i18n="featMobile">Mobile Ready</h3>
+                        <p data-i18n="featMobileDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -327,8 +335,8 @@
                     </div>
                     <div class="feature-box">
                         <img src="svg/featureIntegration.svg" alt="Integration" />
-                        <h3>Integration</h3>
-                        <p>
+                        <h3 data-i18n="featIntegration">Integration</h3>
+                        <p data-i18n="featIntegrationDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -336,8 +344,8 @@
                     </div>
                     <div class="feature-box">
                         <img src="svg/featureHighPerformance.svg" alt="High Performance" />
-                        <h3>High Performance</h3>
-                        <p>
+                        <h3 data-i18n="featPerf">High Performance</h3>
+                        <p data-i18n="featPerfDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -345,8 +353,8 @@
                     </div>
                     <div class="feature-box">
                         <img src="svg/featureAutoBackup.svg" alt="Auto Backup" />
-                        <h3>Auto Backup</h3>
-                        <p>
+                        <h3 data-i18n="featBackup">Auto Backup</h3>
+                        <p data-i18n="featBackupDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -354,8 +362,8 @@
                     </div>
                     <div class="feature-box">
                         <img src="svg/featureScalability.svg" alt="Scalability" />
-                        <h3>Scalability</h3>
-                        <p>
+                        <h3 data-i18n="featScale">Scalability</h3>
+                        <p data-i18n="featScaleDesc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis animi rerum sed
                             rem illo provident repudiandae, voluptatem voluptate consequuntur corrupti at voluptates
                             aliquid distinctio ad ullam minima, necessitatibus nulla!
@@ -369,13 +377,13 @@
         <!-- START Testimonials Section -->
         <section id="testimonials">
             <div class="testimonials secondary-bgc-section">
-                <h2 class="container-header">Testimonials</h2>
+                <h2 class="container-header" data-i18n="testimonials">Testimonials</h2>
                 <div class="container">
                     <div class="testimoni-box1">
                         <div class="comment">
                             <img src="svg/tstmA1.svg" alt="" />
                             <h4>Omer</h4>
-                            <p>
+                            <p data-i18n="tstm1">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
                                 nemo voluptas sunt officiis odit voluptatibus
                             </p>
@@ -383,7 +391,7 @@
                         <div class="comment">
                             <img src="svg/tstmA2.svg" alt="" />
                             <h4>Mrco</h4>
-                            <p>
+                            <p data-i18n="tstm2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
                                 nemo voluptas sunt officiis odit voluptatibus
                             </p>
@@ -393,7 +401,7 @@
                         <div class="comment">
                             <img src="svg/tstmA3.svg" alt="" />
                             <h4>Jaison</h4>
-                            <p>
+                            <p data-i18n="tstm3">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
                                 nemo voluptas sunt officiis odit voluptatibus
                             </p>
@@ -401,7 +409,7 @@
                         <div class="comment">
                             <img src="svg/tstmA4.svg" alt="" />
                             <h4>Ali</h4>
-                            <p>
+                            <p data-i18n="tstm4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique eaque aperiam
                                 nemo voluptas sunt officiis odit voluptatibus
                             </p>
@@ -416,19 +424,19 @@
         <section id="contact">
             <div class="contact">
                 <div class="overlay"></div>
-                <h2 class="container-header">Contact Us</h2>
+                <h2 class="container-header" data-i18n="contact">Contact Us</h2>
                 <div class="container">
                     <form action="#home">
                         <div class="left">
-                            <input required type="text" placeholder="Your First Name" name="fist-name" />
-                            <input required type="text" placeholder="Your Last Name" name="last-name" />
-                            <input required type="email" placeholder="Your Email" name="email" />
-                            <input required type="tel" placeholder="Your Phone" name="phone" />
+                            <input required type="text" placeholder="Your First Name" name="fist-name" data-i18n-ph="firstName" />
+                            <input required type="text" placeholder="Your Last Name" name="last-name" data-i18n-ph="lastName" />
+                            <input required type="email" placeholder="Your Email" name="email" data-i18n-ph="email" />
+                            <input required type="tel" placeholder="Your Phone" name="phone" data-i18n-ph="phone" />
                         </div>
                         <div class="right">
-                            <input required type="text" placeholder="Subject" />
-                            <textarea required name="message" placeholder="Your Message"></textarea>
-                            <input type="submit" value="Send" />
+                            <input required type="text" placeholder="Subject" data-i18n-ph="subject" />
+                            <textarea required name="message" placeholder="Your Message" data-i18n-ph="message"></textarea>
+                            <input type="submit" value="Send" data-i18n-value="send" />
                         </div>
                     </form>
                 </div>
@@ -437,8 +445,12 @@
                 <footer>
                     <div>
                         <h3>YNA Code</h3>
-                        <p>We build reliable and modern software solutions.</p>
-                        <p class="copyright">© <span class="year">2026 YNA Code.</span> All rights reserved.</p>
+                        <p data-i18n="footerDesc">We build reliable and modern software solutions.</p>
+                        <p class="copyright">
+                            <span data-i18n="cr1">©</span>
+                            <span class="year">2026 YNA Code.</span>
+                            <span data-i18n="cr3">All rights reserved.</span>
+                        </p>
                     </div>
                 </footer>
                 <!-- END FOOTER -->
@@ -448,5 +460,7 @@
 
         <script src="js/master.js"></script>
         <script src="js/designEffect.js"></script>
+        <script src="js/lang/translations.js"></script>
+        <script src="js/lang/lang.js"></script>
     </body>
 </html>

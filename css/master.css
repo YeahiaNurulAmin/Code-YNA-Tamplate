@@ -387,6 +387,27 @@ html.dark-mode .toggle-thumb .fa-sun {
 .dark-mode-item {
     display: none;
 }
+.lang-item {
+    display: none;
+}
+.lang-toggle {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 14px;
+    align-self: center;
+    transition: 0.3s;
+}
+.lang-toggle:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
 header nav ul {
     display: flex;
     flex-direction: row;
@@ -1029,8 +1050,8 @@ p {
         padding: 10px 0;
     }
 
-    header nav i {
-        display: block ;
+    header nav i:not(.dark-mode-toggle i) {
+        display: block;
         height: fit-content;
         cursor: pointer;
         visibility: visible;
@@ -1053,8 +1074,15 @@ p {
     header nav > .dark-mode-toggle {
         display: none;
     }
+    header nav > .lang-toggle {
+        display: none;
+    }
 
     .dark-mode-item {
+        display: block;
+    }
+
+    .lang-item {
         display: block;
     }
 
@@ -1365,3 +1393,98 @@ html.dark-mode .popup-container .image-holder {
     background-color: #1e293b;
 }
 /* END DARK MODE */
+
+/* ============================================
+   RTL (ARABIC) SUPPORT
+   ============================================ */
+html[dir="rtl"] body,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] .setting-btn,
+html[dir="rtl"] .lang-toggle {
+    font-family: "Cairo", "Open Sans", sans-serif;
+}
+
+/* Settings box slides in from the right in RTL */
+html[dir="rtl"] .settings-box {
+    left: auto;
+    right: -200px;
+    border-radius: 0 0 0 10px;
+}
+html[dir="rtl"] .settings-box.open-settings-box {
+    left: auto;
+    right: 0;
+}
+html[dir="rtl"] .settings-box .setting-box-icon {
+    left: auto;
+    right: 200px;
+    border-radius: 10px 0 0 10px;
+}
+html[dir="rtl"] .setting-icon {
+    border-radius: 10px 0 0 10px;
+}
+html[dir="rtl"] .setting-btn {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Nav bullets move to the left side */
+html[dir="rtl"] .nav-bullets {
+    right: auto;
+    left: 0;
+}
+html[dir="rtl"] .nav-bullets div {
+    margin: 10px auto 10px 10px;
+}
+html[dir="rtl"] .nav-bullets div span {
+    right: auto;
+    left: 50%;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Header nav spacing */
+html[dir="rtl"] header nav ul li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+/* Logo must stay LTR inside an RTL page */
+html[dir="rtl"] header .logo,
+html[dir="rtl"] header .logo svg text {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+/* Dark mode toggle thumb slides to the left in RTL */
+html[dir="rtl"].dark-mode .toggle-thumb {
+    transform: translateX(-28px);
+}
+
+/* Introduction text centering */
+html[dir="rtl"] .introduction-text {
+    left: auto;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* Skills progress bars */
+html[dir="rtl"] .our-skills .skills-progress-box .progress-container {
+    margin-left: 0;
+    margin-right: 10px;
+    border-radius: 20px 0 0 20px;
+}
+html[dir="rtl"] .our-skills .skills-progress-box .progress-container span {
+    border-radius: 20px 0 0 20px;
+}
+
+/* Popup close button */
+html[dir="rtl"] .popup-container .image-holder .close-btn {
+    right: auto;
+    left: 10px;
+}
+
+/* Footer copyright: restore secondary color for helper spans */
+footer .copyright span:not(.year) {
+    color: var(--secondary-text-color);
+}
+/* END RTL (ARABIC) SUPPORT */
