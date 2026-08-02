@@ -97,8 +97,12 @@ body {
 }
 .settings-box > .setting-container {
     position: relative;
-    padding: 50px 0 50px 0;
+    padding: 50px 10px 50px 10px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: calc(100vh - 25vh - 10px);
+    overflow-y: auto;
 }
 .settings-box > .setting-container h3 {
     margin-top: -20px;
@@ -110,19 +114,43 @@ body {
     color: var(--primary-text-color);
 }
 .setting-container .setting-option .color-options {
-    box-sizing: content-box;
+    box-sizing: border-box;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 60px;
+    width: 100%;
+    padding: 0 10px;
 }
 .setting-container .setting-option .color-list {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-start;
     margin: 0;
-    padding-inline-start: 0;
+    padding-block: 5px;
+    padding-inline: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) transparent;
+    scroll-behavior: smooth;
+}
+.setting-container .setting-option .color-list::-webkit-scrollbar {
+    height: 8px;
+    -webkit-appearance: none;
+}
+.setting-container .setting-option .color-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.setting-container .setting-option .color-list::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .setting-container .setting-option .color-list li {
+    flex: 0 0 auto;
     background-color: black;
     width: 20px;
     height: 20px;
@@ -137,6 +165,27 @@ body {
 }
 .setting-container .setting-option .color-list li:nth-child(3) {
     background-color: #0000ff;
+}
+.setting-container .setting-option .color-list li:nth-child(4) {
+    background-color: #2ecc71;
+}
+.setting-container .setting-option .color-list li:nth-child(5) {
+    background-color: #9b59b6;
+}
+.setting-container .setting-option .color-list li:nth-child(6) {
+    background-color: #e67e22;
+}
+.setting-container .setting-option .color-list li:nth-child(7) {
+    background-color: #e74c3c;
+}
+.setting-container .setting-option .color-list li:nth-child(8) {
+    background-color: #16a085;
+}
+.setting-container .setting-option .color-list li:nth-child(9) {
+    background-color: #f39c12;
+}
+.setting-container .setting-option .color-list li:nth-child(10) {
+    background-color: #34495e;
 }
 .active {
     border: 2px solid white;
@@ -249,8 +298,94 @@ header nav {
     color: var(--primary-color);
     position: relative;
 }
-header nav i {
+header nav i:not(.dark-mode-toggle i) {
     visibility: hidden;
+}
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-track {
+    width: 56px;
+    height: 28px;
+    background: var(--secondary-bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 14px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.toggle-thumb {
+    width: 22px;
+    height: 22px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.toggle-thumb i {
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-thumb .fa-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.toggle-thumb .fa-sun {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+.dark-mode-toggle:hover .toggle-track {
+    border-color: var(--secondary-color);
+}
+
+.dark-mode-toggle:hover .toggle-thumb {
+    background: var(--secondary-color);
+}
+
+html.dark-mode .toggle-track {
+    background: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+html.dark-mode .toggle-thumb {
+    transform: translateX(28px);
+    background: var(--secondary-color);
+}
+
+html.dark-mode .toggle-thumb .fa-moon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+html.dark-mode .toggle-thumb .fa-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.dark-mode-item {
+    display: none;
 }
 header nav ul {
     display: flex;
@@ -915,6 +1050,14 @@ p {
         padding: 5px 10px;
     }
 
+    header nav > .dark-mode-toggle {
+        display: none;
+    }
+
+    .dark-mode-item {
+        display: block;
+    }
+
     /* Introduction Text */
     .introduction-text h1 {
         font-size: 35px;
@@ -1062,6 +1205,10 @@ p {
         height: 10px;
     }
 
+    .dark-mode-item {
+        display: none;
+    }
+
     /* About Us & Skills */
     .about-us .info-box p,
     .our-skills .box .info-box p {
@@ -1183,3 +1330,38 @@ p {
         height: 150px;
     }
 }
+
+/* START DARK MODE */
+html.dark-mode {
+    --background-color: #0f172a;
+    --secondary-bg-color: #1e293b;
+    --primary-text-color: #e2e8f0;
+    --secondary-text-color: #94a3b8;
+    --primary-color: #38bdf8;
+    --bg-opacity: 0.9;
+}
+html.dark-mode .landing-page .overlay {
+    background-color: #00000060;
+}
+html.dark-mode .introduction-text h1 span {
+    color: #38bdf8;
+}
+html.dark-mode header .logo svg rect {
+    fill: #38bdf8;
+}
+html.dark-mode header .logo svg .main-logo-test {
+    fill: #e2e8f0;
+}
+html.dark-mode .our-skills .skills-progress-box .progress-container {
+    background-color: #334155;
+}
+html.dark-mode .gallery .image-box img {
+    border-color: #475569;
+}
+html.dark-mode .contact .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+html.dark-mode .popup-container .image-holder {
+    background-color: #1e293b;
+}
+/* END DARK MODE */

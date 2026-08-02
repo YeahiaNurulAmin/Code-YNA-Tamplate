@@ -20,7 +20,9 @@ let arrGalleryImages = [];
 // Check value in localStorage
 function checkLocalStorageValue() {
     if (mainColor) {
-        document.documentElement.style.setProperty("--primary-color", localStorage.getItem("mainColor"));
+        if (!document.documentElement.classList.contains("dark-mode")) {
+            document.documentElement.style.setProperty("--primary-color", localStorage.getItem("mainColor"));
+        }
         document.querySelectorAll(".color-list li").forEach((i) => {
             i.dataset.color === mainColor ? i.classList.add("active") : i.classList.remove("active");
         });
@@ -83,8 +85,10 @@ function toggleFlipIcon() {
 function changeMainLogoColor(color) {
     const logoText = document.querySelector("header .logo svg .main-logo-test");
     const logo = document.querySelector("header .logo svg rect");
-    logoText.setAttribute("fill", color ?? document.documentElement.style.getPropertyValue("--primary-color"));  
-    logo.setAttribute("fill", color ?? document.documentElement.style.getPropertyValue("--primary-color"));
+    const colorToUse =
+        color ?? getComputedStyle(document.documentElement).getPropertyValue("--primary-color").trim() ?? "#0a2540";
+    logoText.setAttribute("fill", colorToUse);
+    logo.setAttribute("fill", colorToUse);
 }
 
 function setMainColor(color) {
@@ -97,8 +101,11 @@ function setMainColor(color) {
             });
 
             localStorage.setItem("mainColor", e.currentTarget.dataset.color);
-            document.documentElement.style.setProperty("--primary-color", e.currentTarget.dataset.color);
-            changeMainLogoColor(e.currentTarget.dataset.color);
+
+            if (!document.documentElement.classList.contains("dark-mode")) {
+                document.documentElement.style.setProperty("--primary-color", e.currentTarget.dataset.color);
+                changeMainLogoColor(e.currentTarget.dataset.color);
+            }
 
             e.currentTarget.classList.add("active");
         });
@@ -302,9 +309,39 @@ function resetThePage() {
     });
 }
 
+// Dark mode
+function initializeDarkMode() {
+    const toggleBtns = document.querySelectorAll(".dark-mode-toggle");
+    const isDark = localStorage.getItem("darkMode") === "true";
+
+    if (isDark) {
+        document.documentElement.classList.add("dark-mode");
+        document.documentElement.style.removeProperty("--primary-color");
+    }
+
+    toggleBtns.forEach((toggleBtn) => {
+        toggleBtn.addEventListener("click", () => {
+            if (document.documentElement.classList.contains("dark-mode")) {
+                document.documentElement.classList.remove("dark-mode");
+                const storedColor = localStorage.getItem("mainColor");
+                if (storedColor) {
+                    document.documentElement.style.setProperty("--primary-color", storedColor);
+                }
+                localStorage.setItem("darkMode", "false");
+            } else {
+                document.documentElement.classList.add("dark-mode");
+                document.documentElement.style.removeProperty("--primary-color");
+                localStorage.setItem("darkMode", "true");
+            }
+
+            changeMainLogoColor();
+        });
+    });
+}
+
 // Open nav bar
 function openNavBar() {
-    const navBarIcon = document.querySelector("header nav i");
+    const navBarIcon = document.querySelector("header nav .fa-bars");
     const navUl = document.querySelector("header nav ul");
 
     
@@ -334,6 +371,7 @@ initializeRandomBGButtons();
 setMainColor();
 toggleFlipIcon();
 openSettingBox();
+initializeDarkMode();
 checkLocalStorageValue();
 initializeRandomBG();
 setBackgroundImage(localStorage.getItem("currentImagePath") ?? "../images/03.jpg");
