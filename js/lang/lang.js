@@ -68,10 +68,13 @@ function applyLanguage(lang) {
         }
     });
 
-    // Update language toggle button
+    // Update language toggle buttons (dark-mode style pill)
     document.querySelectorAll(".lang-toggle").forEach((btn) => {
-        btn.textContent = lang === "en" ? "عربي" : "EN";
+        btn.dataset.active = lang === "ar" ? "true" : "false";
+        const label = btn.querySelector(".lang-label");
+        if (label) label.textContent = lang === "ar" ? "ع" : "EN";
         btn.title = lang === "en" ? "Switch to Arabic" : "Switch to English";
+        btn.setAttribute("aria-label", btn.title);
     });
 
     localStorage.setItem(LANG_STORAGE_KEY, lang);
