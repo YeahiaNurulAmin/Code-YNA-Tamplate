@@ -1274,7 +1274,7 @@ p {
     }
 
     .dark-mode-item {
-        display: none;
+        display: block;
     }
 
     /* About Us & Skills */
