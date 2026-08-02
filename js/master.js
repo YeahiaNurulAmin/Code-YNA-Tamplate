@@ -359,7 +359,10 @@ function openNavBar() {
     });
 
     document.body.addEventListener("click", (e) => {
-        navUl.style.display = "none";
+        // Only close the mobile drop-down menu; never hide the desktop nav links
+        if (window.matchMedia("(max-width: 970px)").matches) {
+            navUl.style.display = "none";
+        }
     })
 }
 
